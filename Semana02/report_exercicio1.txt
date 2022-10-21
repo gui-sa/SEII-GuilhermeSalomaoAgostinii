@@ -1,0 +1,89 @@
+Nome: Guilherme Salomão Agostini
+Numero: 11721EMT003
+Acesso dia: 20/10/2022
+
+
+Linux in 100 seconds (https://www.youtube.com/watch?v=rrB13utjYV4)
+    - Sistema Operacional Open Source
+    - Criado em 1991 
+    - Usado largamente em servidores
+    - Softwares Embarcados
+    - Dispositivos Mobile
+    - Bootloader
+    - Kernel unificado
+    - System Call Interface
+        - SHELL : escondendo o Kernell do usuario
+    - Programado usando GNU C Library
+    - Alguns comandos:
+        - pwd : Printing Working Dir (onde voce esta)
+        - cd: Change Directories (onde voce quer ir)
+            - ./ Onde voce esta
+            - ../ Voltar
+        - ls: List Files (O que tem no diretorio)
+        - ~ (Diretorio do $HOME)
+        - touch : Create a File
+        - <editor> file_name (para editar o arquivo)
+        - cat : Output File (Mostra o que tem dentro de um arquivo)
+        - grep : Find Text in File (Procura por padroes de texto no arquivo)
+        - du : Disc Usage
+        - chown: Change Owner (Troca as permissoes de usuario)
+        - chmod: Altera as permissoes para cada usuario
+            - Cada arquivos possui hierarquia de permissao para uso
+        - sudo: Super User Do (Permissao de administrador)
+        - apt-get install: Install Packages (é um gerenciador de pacotes)
+        - history :  Prev Commands (mostra os comandos anteriores)
+
+Bash in 100 Seconds (https://www.youtube.com/watch?v=I4EWvMFj37g)
+    - Command Call System (interpretor) para o Linux
+    - Shell porque esconde o Kernell do usuario
+    - which $SHELL: mostra o SHELL Usado
+    - Quando rodamos o SHELL ele inicialmente roda o .bashrc e depois roda o script com base no .bash_profile
+    - Permite programação (.sh):
+        1) Primeira linha : Shebang (leva para a var $BASH) : #!/usr/bin/bash
+        *) cada linha é um comando no bash
+        - Para rodar o programa (.sh), só ir no terminal e fazer ./arquivo.sh <*args...>
+        *)Positional arguments <*args>
+            echo "Nome_da_var: $1" (e assim por diante)
+        *)User Input:
+            Possui condicionais e loops
+     
+
+C in 100 Seconds (https://www.youtube.com/watch?v=U3aXWizDbQ4)
+    - Static Typed (Tipagem forte, cada variavel tem um tipo restrito)
+    - Procedural Programming : Programação gera procedimentos e funções (não possui Orientado Objeto)
+    - Utilizado em Sistemas Operacionais
+    - Utilizado em Banco de dados
+    - Utilizado em Interpretadores (linguagens de programação)
+    - Utilizado no Git : ferramenta de controle de versão
+    - Low level control over resources: linguagem proxima à linguagem de máquina, e converte-se nela.
+    - Não se auto protege contra memory leak (vazamentos de memoria)
+    - GNU GCC é a mais famosa
+    - main é a funcao principal
+    - return 0 é sucesso e -1 é falha
+    - 1 char tem 1 byte e uma string é um conjunto de char, sendo a ultima o ´\0´
+    - malloc aloca memoria dinamicamente
+        - Quando não for mais necessario, precisa libera-la (Free)
+    - Apesar de não suportar Orientado Objeto, suporta Structs (grupo de variaveis)
+
+
+C++ in 100 Seconds (https://www.youtube.com/watch?v=MNeX4EGtR5Y)
+    - Static Typed (Tipagem forte, cada variavel tem um tipo restrito)
+    - É um superset do C, ou em outras palavras, C com suporte à orientação a objetos (e mais)
+        - Poliformismo
+        - Encapsulamento
+        - Herança
+        - Abstração
+    - Utilizado em Banco de dados
+    - Utilizado em Game Engines
+    - Utilizado em aplicações de desktop
+    - Utilizado em Sistemas Embarcados
+    - Utilizado em outras linguagens
+    - Low level control over resources, porém, com Classes e ponteiros mais sofisticados
+    - main é a funcao principal
+    - Class: projeto de um objetos
+        - Atributos e metodos privados ou publicos
+    - clang++ para compilar
+
+    
+
+

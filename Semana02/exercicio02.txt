@@ -1,12 +1,13 @@
+Nome: Guilherme Salomão Agostini
+Numero: 11721EMT003
+Acesso dia: 20/10/2022
+
 a)Liste e descreva o que são as 4 etapas do processo de compilação.:
 
-Preprocessing: Nesta fase, primeiramente todos os comandos começados por ‘#’ são processados e convertidos em arquivos intermediários (sem o símbolo ‘#’). A segunda etapa é remover os comentários. A terceira etapa é expandir as definições. A terceira etapa é incluir todos os códigos que foram importados. Finalmente os condicionais são traduzidos para um arquivo com código intermediário ao assembly.
-
-Compilation Proper: Nesse momento o arquivo intermediário existe e o compilador o traduz para o assembly (.s).
-
-Assembly: O código em assembly é convertido para o código de máquina usando o assembler (.o).
-
-Linking: A última fase da compilação conecta o código de máquina escrita aos outros códigos importados: finalizando o .exe ou .out
+	1) Preprocessing: Nesta fase, primeiramente todos os comandos começados por ‘#’ são processados e convertidos em arquivos intermediários (sem o símbolo ‘#’). A segunda etapa é remover os comentários. A terceira etapa é expandir as definições. A terceira etapa é incluir todos os códigos que foram importados. Finalmente os condicionais são traduzidos para um arquivo com código intermediário ao assembly.
+	2) Compilation Proper: Nesse momento o arquivo intermediário existe e o compilador o traduz para o assembly (.s).
+	3) Assembly: O código em assembly é convertido para o código de máquina usando o assembler (.o).
+	4) Linking: A última fase da compilação conecta o código de máquina escrita aos outros códigos importados: finalizando o .exe ou .out
 
 b) O compilador gcc permite fornecer parâmetros extras, que modificam desde a emissão de erros até o binário final, o otimizado para determinados comportamentos. Explique a função dos seguintes parâmetros:
 	
@@ -16,3 +17,5 @@ b) O compilador gcc permite fornecer parâmetros extras, que modificam desde a e
 	iv) -Wall: Emite todos os pontos de atenção que o GCC pode fornecer;
 	v) -OS: Otimiza o tamanho do arquivo;
 	vi) -O3: Otimiza o espaço e a performance ainda mais.
+
+	

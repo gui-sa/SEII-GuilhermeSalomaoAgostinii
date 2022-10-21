@@ -1,0 +1,30 @@
+Nome: Guilherme Salomão Agostini
+Numero: 11721EMT003
+Acesso dia: 20/10/2022
+
+Vídeos sobre a compilação da linguagem C foram assistidos. Dentro de cada pasta possui um arquivo "bash.sh" com os comandos executados. Segue os detalhes:
+    - ex2 
+        - Compilando um arquivo de funções (.c sem main()) e formando objetos (.o)
+        - Organizando o binario do objeto em uma pasta "obj".
+    - ex3 
+        - Organizando os includes na pasta "include"
+    - ex4 
+        - Organizando os arquivos de funcoes (.c) na pasta "src"
+    - ex5 
+        - Compilando os arquivos de funcoes (.c que geram binarios referenciaveis pelo header) e compilando a funcao principal main (executavel)
+    - Makefile 
+        - ex6: criando arquivo "Makefile" para automatizar o processo de compilação
+            A target "all:" roda pelo comando "make" e simplesmente chama o bash linha a linha de cima para baixo
+            Podemos criar outros targets de nomes quaisquer, porem ficaria "make target_novo"
+        - ex7: criando variáveis no arquivo "Makefile" para facilitar manutenção dos diretorios
+            Podemos criar variaveis no Makefile
+            Podemos chamar targets dentro de targets.
+        - ex8: tornando o processo ainda mais modular no "Makefile"
+            Atraves do input do usuario no bash, é possivel tornar os comandos ainda mais modulares.
+
+REFERENCIAS
+    - (https://www.youtube.com/watch?v=hrPxwKtedCc&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=2)
+    - (https://www.youtube.com/watch?v=serQ5oGeMek&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=2)
+    - (https://www.youtube.com/watch?v=gv96TJnIw-w&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=3)
+    - (https://www.youtube.com/watch?v=LFZFndrXd-Q&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=4)
+    - (https://www.youtube.com/watch?v=EvPqzgEAFnA&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=5)
