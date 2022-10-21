@@ -6,7 +6,7 @@ print (len(message)) #tamanho da string
 print (message[0]) #Primeiro char da string
 print (message[-1]) #Ultimo char da string
 print (message[:5] + "\tincludes the first but not the last") #Do primeiro ao quinto
-print (message[6:]) #Do sexto ao ultimo
+print (message[6:]) #Do setimo elemento ao ultimosetimo
 print (message.lower()) #Tudo mundo minisculo
 print (message.upper()) #Todo mundo maiusculo
 print (message.count('Hello')) #Contar quantas vezes a string Hello aparece na mensagem

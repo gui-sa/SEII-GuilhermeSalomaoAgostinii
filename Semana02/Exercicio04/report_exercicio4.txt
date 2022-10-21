@@ -1,0 +1,31 @@
+Nome: Guilherme Salomão Agostini
+Numero: 11721EMT003
+Acesso dia: 20/10/2022
+
+Sobre a referência bibliográfica Python in 100 seconds (https://www.youtube.com/watch?v=x7X9w_GIm1s):
+    - A linguagem de programação mais popular (2021)
+    - linguagem amigável e com boa curva de aprendizado
+    - Comunidade forte
+    - Tipagem possibilita facilidade de entendimento e DEBUG, facilitando a manutenção
+    - Surgiu em 1991
+    - Usado para criar aplicações do lado do Servidor (Server Side)
+        - WEB APPS (django)
+        - Machine Learning
+        - Estatística e manipulação do BIG DATA
+    - Não é fortemente tipada
+    - Aceita POO (e é uma linguagem pautada em POO)
+    - Possui Package Manager (PIP).
+
+A pasta Exercicio 04 contempla os seguintes temas (para mais detalhes, todos os arquivos e funcoes estao comentadas):
+    - py02.py executa os principais comandos relacionados à manipulação de strings
+    - py03.py executa os principais comandos relacionados à manipulação de valores numéricos, cálculos matemáticos basicos e comparações matemáticas básicas.
+    - py04.py executa os principais comandos relacionados à manipulações com listas, tuplas e sets.
+    - py05.py executa os principais comandos relacionados aos dicionarios.
+    - py06.py mostra o funcionamento do if, elif, else e os booleanos.
+    - py07.py mostrou as principais iteracoes e detalhes delas.
+    - py08.py mostra a tipagem e as possibilidades basicas de uma funcao em python.
+    
+
+
+    (Conteudos da playlist : https://www.youtube.com/watch?v=k9TUPpGqYTo&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=2)
+
