@@ -22,6 +22,9 @@ Vídeos sobre a compilação da linguagem C foram assistidos. Dentro de cada pas
         - ex8: tornando o processo ainda mais modular no "Makefile"
             Atraves do input do usuario no bash, é possivel tornar os comandos ainda mais modulares.
 
+
+    -Observação: É uma boa pratica colocar diretivas .o e executáveis no .gitignore. Porém, para o intuito dessa atividade achei importante manter.
+
 REFERENCIAS
     - (https://www.youtube.com/watch?v=hrPxwKtedCc&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=2)
     - (https://www.youtube.com/watch?v=serQ5oGeMek&list=PL3ZslI15yo2pCf0WpZmV-ga02kMPxKH3p&index=2)

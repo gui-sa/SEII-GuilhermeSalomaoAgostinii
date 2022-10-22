@@ -30,8 +30,10 @@ A pasta Exercicio 04 contempla os seguintes temas (para mais detalhes, todos os 
     - py14.py executando uma funcao que troca todos os nomes de uma pasta para um padrao numerico, mantendo as extensoes.
     - py15.py exemplo lidando com arquivo .csv
     - py16.py exemplo lidando com arquivo .csv e formatando essas informacoes em um html.
-    - 
-    - py18.py 
+    - py17.py algumas funcoes e comandos para lidar com data e hora
+    - py18.py escopo de variaveis no python.
+    - py19.py detalhamento de opcoes para ordenamentos de listas, tuplas, dicionarios e objetos.
+    - py20.py lidando com try/exception/else/finally para amortecer errors do usuario/programador.
 
     (Conteudos da playlist : https://www.youtube.com/watch?v=k9TUPpGqYTo&list=PL-osiE80TeTskrapNbzXhwoFUiLCjGgY7&index=2)
 
