@@ -1,0 +1,29 @@
+Name: Guilherme Salomão Agostini
+ID: 11721EMT003
+
+#Introduction:
+    Each running shelll is a process and when you run some other aplication on it, the shell opens his process as his child process and starts the other aplication process just coming back when the aplication stops.
+    Process manipulation are declared on <unistd.h>
+    Every process has an ID (PID) that are 16 bit numbers, a parent process (except the zombie ones)
+    It is possible to acquire process ID using getpid() (with pid_t typedef) and its parent ID using getppid()
+
+#ex1.c generating ex1
+    As it is possible to see, maintaining the same terminal, the parent ID will always be the same, depite the fact that every time the ex1 runs, the new process has a diferent value.
+
+Shell command ps -e -o pid,ppid,command
+    Shows all process running in your machine and prints it pid, ppid (parent id) and command
+    
+Shell command kill <pid>
+    Terminates a process by force.
+
+#ex2.c generating ex2
+    It retuns the command ls -l in root path (/) called by Shell.
+    However, using shell command it can run literally any process.
+    Because it runned in the Shell its process works just as if you had ran it there.
+
+#Using Fork and exec
+    Function Fork creates a child process.
+    
+
+
+
