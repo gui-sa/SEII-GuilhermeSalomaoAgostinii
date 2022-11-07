@@ -1,0 +1,9 @@
+1) Qual o limite de bytes a serem enviados por pacotes TCP e UDP
+Resp: É permitido o envio de um pacote de até 64kBytes, porém, acaba sendo limitado a um maximo de 1500 bytes por fragmento, por conta do limite do protocolo Ethernet.
+
+2) Como um arquivo grande pode ser transmitido via internet
+Resp: Ele é transmitido em vários fragmentos. O pacote enviado possui indice, ao qual o outro lado da aplicação utiliza para remontar o arquivo.
+
+
+3) Qual a diferença entre as implementações TCP e UDP para esse problema
+Resp: Nas aplicações de TCP, caso um pacote se perca, ou corrompa, o outro lado que não recebeu consegue pedir com precisão qual o pacote que falta enquanto na aplicação UDP, não existe esse controle... Caso um frangmento se perca, não existe reenvio.

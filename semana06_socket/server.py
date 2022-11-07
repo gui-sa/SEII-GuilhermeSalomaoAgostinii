@@ -11,7 +11,7 @@ import threading #for message handling - IO Bound
 
 
 HEADER = 64 #Bytes
-PORT = 5050 #Port thta are not beeing used
+PORT = 5060 #Port thta are not beeing used
 SERVER = "127.0.0.1" #Local IP
 SERVER = socket.gethostbyname(socket.gethostname())#get local ip address and use it as your server IP
 ADDR = (SERVER, PORT)
@@ -29,13 +29,14 @@ def handle_client(conn , addr): #Handle individually each connection
         msg_length = conn.recv(HEADER).decode(FORMAT) #blocking line of code. Args is a bytes number. decode is getting up the bytes and translating them into utf-8 - char.
         #Header will bring us how many bytes this messages brang
         #Header might not be big enought
-        msg_length = int(msg_length) #string to int
-        msg = conn.recv(msg_length).decode(FORMAT) #Now you receive yhe payload.
-        # If you dont disconnect properly, the server might not accept same connection (because it is already connected). Due to that, it is important to sent a proper message to end a connection the right way
-        if msg == DISCONNECT_MESSAGE:
-            connected = False
+        if msg_length:
+            msg_length = int(msg_length) #string to int
+            msg = conn.recv(msg_length).decode(FORMAT) #Now you receive yhe payload.
+            # If you dont disconnect properly, the server might not accept same connection (because it is already connected). Due to that, it is important to sent a proper message to end a connection the right way
+            if msg == DISCONNECT_MESSAGE:
+                connected = False
         print(f"[{addr}] - {msg}" )
-        conn.close() #disconnecting socket!
+    conn.close() #disconnecting socket!
 
 
 def start():#Allow Client to connect to our aplication and create a new thread to handle it
@@ -45,7 +46,7 @@ def start():#Allow Client to connect to our aplication and create a new thread t
         conn, addr = server.accept() #That line blocks your code by waiting you client .. conn is a socket obj and addr is the information about the connection
         thread = threading.Thread(target=handle_client, args=(conn, addr)) #Creating thread obj that handles that new client!
         thread.start()
-        print(f"[ACTIVE CONNECTIONS: {threading.activeCount()-1}]")
+        print(f"[ACTIVE CONNECTIONS: {threading.active_count()-1}]")
 print("[STARTING] Server is starting...")
 start()
 
