@@ -1,0 +1,79 @@
+<MyRootWidget>:
+    BoxLayout:
+        canvas:
+            Color:
+                rgba:0.92,0.92,0.92,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        orientation:'vertical'
+        AppBar:
+        Menu:
+        Widget:
+
+<AppBar@BoxLayout>:
+    padding:'6dp'
+    canvas:
+        Color:
+            rgba:0,0.3,0.13,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    size_hint_y:None
+    height:'45dp'
+    Label:
+        text:"TesteTY"
+        bold:True
+        font_size:'20dp'
+        halign:'left'
+        text_size:self.size
+        valign:'center'
+        padding_x:'10dp'
+    Icon:
+        active:True
+        background_normal:'magnifying-glass.png'
+    Icon:
+        active:True
+        background_normal:'dots-three-vertical.png'
+    
+
+<Menu@BoxLayout>:
+    canvas:
+        Color:
+            rgba:0,0.3,0.13,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    padding:'5dp'
+    spacing:'10dp'
+    size_hint_y:None
+    height:'35dp'
+    Icon:
+        background_normal:'camera.png'
+    MenuButton:
+        text:'CHATS'
+        active:True
+    MenuButton:
+        text:'STATUS'
+    MenuButton:
+        text:'CALLS'
+    
+<MenuButton@Button>:
+    active:False
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Line:
+            width:2 if root.active else 0.1
+            points:self.x,self.y,self.x+self.width,self.y
+    
+    background_color: 0,0,0,0
+    bold:True
+    color: (1,1,1,1) if root.active else (1,1,1,0.5)
+
+<Icon@Button>:
+    active:False
+    size_hint_x:None
+    width:self.height
+    border:0,0,0,0
+    background_color: (1,1,1,1) if root.active else (1,1,1,0.5)
