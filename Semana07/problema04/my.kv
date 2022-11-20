@@ -9,6 +9,8 @@
         orientation:'vertical'
         AppBar:
         Menu:
+        BoxLayout:
+            Chat:
         Widget:
 
 <AppBar@BoxLayout>:
@@ -22,7 +24,7 @@
     size_hint_y:None
     height:'45dp'
     Label:
-        text:"TesteTY"
+        text:"ZapZap"
         bold:True
         font_size:'20dp'
         halign:'left'
@@ -57,7 +59,50 @@
         text:'STATUS'
     MenuButton:
         text:'CALLS'
-    
+
+<Foto@Widget>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Ellipse:
+            size:self.size
+            pos:self.pos
+            source: 'Perfil.jpeg'
+    size_hint_x:None
+    width: self.height
+
+
+<Chat@BoxLayout>:
+    size_hint_y:None
+    height:'80 dp'
+    padding:'10dp'
+    Foto:
+    BoxLayout:
+        orientation:'vertical'
+        padding:'10dp'
+        Label:
+            text:'Nome do Grupo ou Pessoa'
+            color: 0,0,0,1
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+            bold:True
+        Label:
+            text: 'Ultima mensagem do chat'
+            color: 0,0,0,1
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+    Label:
+        text:'21:01PM'
+        color:0,0,0,0.5
+        size_hint_x:None
+        width:'100dp'
+        text_size:self.size
+        valign:'top'
+        halign:'right'
+
+
 <MenuButton@Button>:
     active:False
     canvas:
