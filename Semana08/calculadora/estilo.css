@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap'); 
+*{
+    margin:0;
+    padding:0;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+}
+
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:70vh;
+    background:#41002d;
+}
+
+h1{
+    display:block;
+    margin:0 0 32px 0;
+    font-size: 25px;
+    font-weight:bolder;
+    color: #fff
+}
+input{
+    margin:2px;
+    border:none;
+    border-radius: 3px;
+}
+
+input[type=button] {
+    width:100px;
+    height:50px;
+    transition: ease-in-out 200ms;
+}
+
+input[type=button]:hover {
+    filter:brightness(50%);
+}
+
+input[type=button]:active {
+    transform: scale(0.9);
+}
+
+#calculadora{
+    box-shadow: 0 0 20px black;
+    border-radius:0 0 35px 35px;
+}
+
+#calculadora div{
+    display: flex;
+}
+
+#visor{
+    width: calc(100% - 4px);
+    height: 40px;
+}
+
+#quarta input:nth-child(1){
+    background:rgb(241,26,26);
+    border-radius:0 0 0 35px;
+}
+
+input[value='=']{
+    background:rgb(26,76,241);
+
+}
+
+#quarta input:nth-child(4){
+    border-radius:0 0 35px 0;
+}
+
+#calculadora div input:nth-child(4){
+    background: #b4b4b4;
+}
+
