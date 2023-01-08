@@ -33,6 +33,7 @@ if __name__ == '__main__':
     vel = 0                    # Velocidade
     Aacc = 0                   # Aceleracao
     length_draw = 300;
+    TSim = 0;
 
     #COLORS
     white = (255,255,255)
@@ -52,6 +53,7 @@ if __name__ == '__main__':
             pygame.draw.lines(bg, black, False, [(width/2, 50), (self.x, self.y)], 2)
             pygame.draw.circle(bg, black, (self.x, self.y), self.radius)
             pygame.draw.circle(bg, Dark_red, (self.x, self.y), self.radius - 2)
+            pygame.display.set_caption(f'Aeropendulo Simulation Game t={int(TSim)}')
     
     
     def grid():  # Draw a grid behind the pendulum
@@ -76,7 +78,11 @@ if __name__ == '__main__':
         pygame.display.update()
     
     #BEFORE START
+    # carregando fonte
+
     pygame.init()
+    font = pygame.font.SysFont(None, 55)
+    pygame.display.set_caption('Aeropendulo Simulation Game t=0')
     background = pygame.display.set_mode((width, height))
     clock = pygame.time.Clock()
 
@@ -135,7 +141,7 @@ if __name__ == '__main__':
 
     angle = 0
     while not Out:
-
+        TSim = TSim + Ta
         for event in pygame.event.get():  # Coleta de eventos do pygame                 
             if event.type == pygame.QUIT: #Quando fecha a janela                   
                 Out = True                                   
