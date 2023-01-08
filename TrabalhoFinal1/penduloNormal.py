@@ -9,18 +9,15 @@ length = 0                 # Comprimento L entre a bola e o rolamento
 angle = 0                  # Angulo
 vel = 0                    # Velocidade
 Aacc = 0                   # Aceleracao
- 
+length_draw = 300;
+
 #COLORS
 white = (255,255,255)
 black = (0,0,0)
 gray = (150, 150, 150)
 Dark_red = (150, 0, 0)
- 
-#BEFORE START
-pygame.init()
-background = pygame.display.set_mode((width, height))
-clock = pygame.time.Clock()
- 
+     
+
 class ball(object):
  
     def __init__(self, XY, radius):  # Set ball coordenates and radius
@@ -46,7 +43,7 @@ def angle_Length():  # Send back the length and angle at the first click on scre
     angle = math.asin((pendulum.x - width/2)/ length)
     return (angle, length)
  
-def get_path(first_angle, length): # with angle and length calculate x and y position
+def get_path(angle, length): # with angle and length calculate x and y position
     pendulum.x = round(width/2 + length * math.sin(angle))
     pendulum.y = round(50 + length * math.cos(angle))
  
@@ -56,27 +53,34 @@ def redraw(): # Clean up the screen and start a new grid and new frame of pendul
     pendulum.draw(background)
     pygame.display.update()
  
+#BEFORE START
+pygame.init()
+background = pygame.display.set_mode((width, height))
+clock = pygame.time.Clock()
+
+pendulum = ball((int(width / 2),300), 15) # Comeca com o pendulo invisivel equilibrado no meio da tela para cima
+
  
-pendulum = ball((int(width / 2),-100), 5) # Comeca com o pendulo invisivel equilibrado no meio da tela para cima
- 
-while not Out:
-    clock.tick(120)   #FPS
- 
-    for event in pygame.event.get():  # Coleta de eventos do pygame                 
-        if event.type == pygame.QUIT: #Quando fecha a janela                   
-            Out = True                                   
-        if event.type == pygame.MOUSEBUTTONDOWN:  #Quando clica o mouse em algum local
-            pendulum = ball(pygame.mouse.get_pos(), 15)
-            angle, length = angle_Length()           
-            acceleration = True                          
- 
-    if acceleration:   # Increase acceleration and damping in the pendulum moviment
-        Aacc = -0.005 * math.sin(angle)
-        vel += Aacc
-        vel *= 0.99  # damping factor
-        angle += vel
-        get_path(angle, length)
- 
-    redraw()
- 
-pygame.quit()
+if __name__ == '__main__': 
+
+    while not Out:
+        clock.tick(120)   #FPS
+    
+        for event in pygame.event.get():  # Coleta de eventos do pygame                 
+            if event.type == pygame.QUIT: #Quando fecha a janela                   
+                Out = True                                   
+            if event.type == pygame.MOUSEBUTTONDOWN:  #Quando clica o mouse em algum local
+                pendulum = ball(pygame.mouse.get_pos(), 15)
+                angle, length = angle_Length()           
+                acceleration = True                          
+    
+        if acceleration:   # Increase acceleration and damping in the pendulum moviment
+            Aacc = -0.005 * math.sin(angle)
+            vel += Aacc
+            vel *= 0.99  # damping factor
+            angle += vel
+            get_path(angle, length_draw)
+    
+        redraw()
+        
+    pygame.quit()
