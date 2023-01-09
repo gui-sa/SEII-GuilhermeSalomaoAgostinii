@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+   <head>
+      <title>RaspIOT</title>
+      <link rel="stylesheet" href='../static/master.css'/>
+   </head>
+
+   <body>
+		<h1>Projeto IOT com raspberryPi</h1>
+		<h2>O projeto é composto por um raspberryPi3, que é capaz de controlar 3 luzes e receber a informação de um sensor de presença</h2>
+		<h3>Status 0 representa desligado e Status 1 ligado</h3>
+		<br>
+		<h2>Status sensor de Presença</h2>
+		<h3></h3>
+		<h3> Status: {{ senPIR  }}</h3>
+		<br>
+		
+		<h2> Status Luzes </h2>
+		<h3> Luz Vermelha:   {{ ledRed  }}</h3>
+		<h3> Luz Amarela:   {{ ledYlw  }}</h3>
+		<h3> Luz Verde:   {{ ledGrn  }}</h3>
+		<br>
+		<h2> Comando das Luzes: </h2>
+		<h3> 
+			Luz Vermelha: 
+			<a href="/ledRed/on" class="button">LIGAR</a>  
+			<a href="/ledRed/off"class="button">DESLIGAR</a>
+		</h3>
+		<h3> 
+			Luz Amarela:
+			<a href="/ledYlw/on" class="button">LIGAR</a>  
+			<a href="/ledYlw/off"class="button">DESLIGAR</a>
+		</h3>
+		<h3> 
+			Luz Verde:
+			<a href="/ledGrn/on" class="button">LIGAR</a>  
+			<a href="/ledGrn/off"class="button">DESLIGAR</a>
+		</h3>
+		
+   </body>
+</html>
